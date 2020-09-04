@@ -25,19 +25,19 @@ function init(resultFromServer){
         case 'Rain':
         case 'Drizzle':
         case 'Mist':
-            document.body.style.backgroundImage = "url('images/Rainy.jpg')"
+            document.body.style.backgroundImage = "url('images/Rainy.jpg')";
             break;
         case 'Clouds':
-            document.body.style.backgroundImage = "url('images/Cloudy.jpg')"
+            document.body.style.backgroundImage = "url('images/Cloudy.jpg')";
             break;
         case 'Clear':
-            document.body.style.backgroundImage = "url('images/Sunny.jpg')"
+            document.body.style.backgroundImage = "url('images/Sunny.jpg')";
             break;
         case 'Thunderstorm':
-            document.body.style.backgroundImage = "url('images/Stormy.jpg')"
+            document.body.style.backgroundImage = "url('images/Stormy.jpg')";
             break;
         case 'Snow':
-            document.body.style.backgroundImage = "url('images/Snow.jpg')"
+            document.body.style.backgroundImage = "url('images/Snow.jpg')";
             break;
         default:
             break;
@@ -60,9 +60,22 @@ function init(resultFromServer){
 
     cityHeader.innerHTML = resultFromServer.name;
 
-    humidityElement.innerHTML = 'Humidity levels at ' + resultFromServer.main.humdity + '%';
+    humidityElement.innerHTML = 'Humidity levels at ' + resultFromServer.main.humidity + '%';
+
+    setPositionForWeatherInfo();
 }
-document.getElementById('searchButton').addEventListener('click', ()=>{
+
+function setPositionForWeatherInfo () {
+    let weatherContainer = document.getElementById('weatherContainer');
+    let weatherContainerHeight = weatherContainer.clientHeight;
+    let weatherContainerWidth = weatherContainer.clientWidth;
+
+    weatherContainer.style.left = `calc(50% - ${weatherContainerWidth/2}px)`;
+    weatherContainer.style.top = `calc(50% - ${weatherContainerHeight/1.5}px)`;
+    weatherContainer.style.visibility = 'visible';
+
+}
+document.getElementById('searchButton').addEventListener('click', ()=> {
     let searchTerm = document.getElementById('searchInput').value;
 
     if (searchTerm)
