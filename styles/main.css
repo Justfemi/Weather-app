@@ -12,6 +12,9 @@ body {
     text-shadow: 2px 2px 1px black;
     text-decoration-line: none;
 }
+h1 {
+    color: #fff;
+}
 #weatherContainer {
     background-color: rgba(0, 0, 0, 0.25);
     box-shadow: 1px 1px 5px black;
@@ -33,10 +36,12 @@ body {
 }
 #searchContainer input {
     width: 200px;
+    outline: 0;
 }
 #searchContainer button {
     background-color: rgb(1, 159, 200);
     width: 75px;
+    outline: 0;
 }
 .searchControl {
     box-shadow: 2px 2px 5px black ;
@@ -50,17 +55,17 @@ body {
 }
 #weatherMain div {
     display: inline-block; 
-}
-#weatherDescriptionHeader {
-    font-size: 20px;
-    vertical-align: 50%;
+    text-align: center;
 }
 #temperature {
     font-size: 30px;
     vertical-align: 25%;
+    text-align: center;
 }
 #documentIconImg {
-    vertical-align: 10%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 .bottom-details {
     display: block;
@@ -70,10 +75,22 @@ body {
 hr {
     margin-bottom: 20px;
 }
-#footer {
-    bottom: 5%;
-    display: block;
-    position: fixed;
+.footer {
+    position: relative;
+    top: 425px;
     text-align: center;
-    width: 100%;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer__title {
+    font-size: 15px;
+    margin-bottom: 2rem;
+}
+
+.footer__icon {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin: 0 1rem;
+    top: 400px;
 }

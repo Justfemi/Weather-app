@@ -4,9 +4,8 @@
         <meta charset="UTF-8">
         <title>Weather App</title>
         <link rel="icon" href="images/cloud.png" sizes="32x32" type="image/png">
-
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
         <link rel=stylesheet href="styles/main.css">
-
     </head>
     <body>
         <!--HEADER-->
@@ -21,16 +20,17 @@
                 <button class="searchControl" id="searchButton">Search</button>
             </div>
         </header>
-
         <!--BODY-->
         <section>
             <div id=weatherContainer style="display: flex">
                 <div id=weatherDescription>
                     <h1 id="cityHeader"></h1>
-                    <div id=weatherMain>
-                        <div id="temperature"></div>
+                    <div style="display: flex">
+                        <img id=documentIconImg>
+                    </div>
+                    <div id=weatherMain style="display:flex">
+                        <div id="temperature" style="margin-left: 10px"></div>
                         <div id="weatherDescriptionHeader"></div>
-                        <div><img id=documentIconImg></div>
                     </div>
                     <hr>
                     <div id="windspeed" class="bottom-details"></div>
@@ -38,12 +38,19 @@
                 </div>
             </div>
         </section>
-
         <!--FOOTER -->
-        <footer id="footer">
-            Weather App - &copy; Justfemi 2020
-        </footer> 
+        <footer class="footer">
+            <p class="footer__title">AjibadeOlufemi</p>
 
+            <div class="footer__social">
+                <a href="https://twitter.com/Justfemi10" target="_blank" class="footer__icon"><i class="bx bxl-twitter"></i></a>
+                <a href="http://wa.me/2349032983949" target="_blank" class="footer__icon"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.instagram.com/justfemi_10/" target="_blank" class="footer__icon"><i class="bx bxl-instagram"></i></a>
+            </div> 
+    
+            <p>&#169; 2020 copyright all right reserved</p>
+        </footer> 
+        
         <script src="script/main.js"></script>
     </body>
 </html>
