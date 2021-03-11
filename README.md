@@ -1,2 +1,2 @@
 # Weather-app
-An app built with html,css and js (no framewrorks)  where users can get weather information in real-time.
+The [weather app](http://justfemi-weatherApp.surge.sh) was built with html,css and javascript (no framewrorks) where users can get weather information in real-time.
